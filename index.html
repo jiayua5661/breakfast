@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>早安美芝城</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- h1>a{網站名稱} 回上層^navigation 導覽列 -->
+        <!-- h1>a{}^nav>ul>li*4>a{link} -->
+        <h1><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+        <nav>
+            <ul class="clearfix">
+                <li><a href="./about.html">關於我們</a></li>
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./product.html">美味餐點</a></li>
+                <li><a href="./store.html">門市據點</a></li>
+                <li><a href="./contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="social-icon">
+            <!-- # 錨點anchor ID -->
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+            <i class="fa-solid fa-cart-shopping shoppcarticon" id="shopcart"></i>
+            <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
+        </div>
+    </header>
+
+
+    <div class="bannerbox">
+        <img src="./img/banner.jpg" alt="" class="w-100 bannerbuttom" id="">
+        <img src="./img/bannercut01.jpg" alt="" class="w-100 bannercutimg">
+        <img src="./img/bannercut02.jpg" alt="" class="w-100 bannercutimg">
+        <img src="./img/bannercut03.jpg" alt="" class="w-100 bannercutimg">
+    </div>
+    <div class="container h2container">
+        <h2>最新消息</h2>
+        <h2> </h2>
+    </div>
+
+    <div class="container clearfix">
+        <div class="w-33 float-left">
+            <div id="product1">
+                <img src="./img/prod_ham1.jpg" alt="">
+                <p>早美雞腿排堡</p>
+            </div>
+        </div>
+        <div class="w-33 float-left">
+            <div>
+                <img src="./img/prod_ham2.jpg" alt="">
+                <p>招牌豬肉堡</p>
+            </div>
+        </div>
+        <div class="w-33 float-left">
+            <div>
+                <img src="./img/prod_ham3.jpg" alt="">
+                <p>黃金蝦餅堡</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 float-left text-center"><a href="" class="btn btn-primary">觀看更多</a></div>
+
+
+    <div class="container h2container">
+        <h2>美味餐點</h2>
+        <h2> </h2>
+    </div>
+    <!-- .w-25.float-left*4>.bg-primary.m-2>img.w-100+p{產品標題$} -->
+    <!-- 4欄排版.靠左浮動*4>.背景.內邊界>img寬100+標題 -->
+    <div class="border-bottom-dash">
+        <div class="container clearfix">
+            <!-- <h2 class="w-100 float-left">熱門飲品</h2> -->
+            <div class="w-25 float-left">
+                <div class="position-relative m-2 border-radius over-hidden picbox">
+                    <img src="./img/prod_drinks1.jpg" alt="" class="w-100">
+                    <p class="">早美紅茶</p>
+                    <!-- 子層絕對定位 p.position-absolute.tag{優惠} -->
+                    <!-- <p class="position-absolute tag">優惠</p> -->
+                </div>
+            </div>
+            <div class="w-25 float-left">
+                <div class="m-2 border-radius over-hidden picbox">
+                    <!-- <div class="position-relative"> -->
+                    <img src="./img/prod_drinks2.jpg" alt="" class="w-100">
+                    <!-- <p class="position-absolute tag-left-bottom">優惠</p> -->
+                    <!-- </div> -->
+                    <p class="">鮮奶茶</p>
+                </div>
+            </div>
+            <div class="w-25 float-left">
+                <div class="m-2 border-radius over-hidden picbox">
+                    <img src="./img/prod_drinks3.jpg" alt="" class="w-100">
+                    <p class="">台灣四季春</p>
+                </div>
+            </div>
+            <div class="w-25 float-left">
+                <div class="m-2 border-radius over-hidden picbox">
+                    <img src="./img/prod_drinks4.jpg" alt="" class="w-100">
+                    <p class="">非基改豆漿</p>
+                </div>
+            </div>
+            <!-- .w-100.float-left.text-center>a.btn.btn-primary{觀看更多} -->
+            <div class="w-100 float-left text-center"><a href="" class="btn btn-primary">觀看更多</a></div>
+        </div>
+    </div>
+
+    <footer>
+        <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
+        <div class="footer-logo">早安美芝城</div>
+        <ul class="clearfix">
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">最新消息</a></li>
+            <li><a href="#">產品介紹</a></li>
+            <li><a href="#">門市資訊</a></li>
+            <li><a href="#">聯絡我們</a></li>
+        </ul>
+        <!-- 水平線 -->
+        <hr>
+        <p class="text-center">
+            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
+        </p>
+        <div class="social-icon text-center">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
+    </footer>
+    <a href="#" class="pagetop" id="backtotop"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- 購物車 -->
+    <div class="cartbox" id="cartpageside">
+        <div class="cartheader">
+            <h4>購物車</h4>
+            <button class="cartesc" id="cartpagesideesc"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- 購物車商品 -->
+        <div class="cartproduct-list">
+        </div>
+
+        <div class="cartbottombox">
+            <div class="totalmoneybox">
+                <p>小計:</p>
+                <p>NT$</p>
+            </div>
+            <div class="cartbtnbox">
+                <button class="cartbtn m-b-10">查詢購物車</button>
+                <button class="cartbtn">結帳</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/slide.js"></script>
+    <script src="./js/backtotop.js"></script>
+    <script>
+        document.getElementById('shopcart').onclick = function () {
+            document.getElementById('cartpageside').style = "transform: translateX(0%);";
+        }
+        document.getElementById('cartpagesideesc').onclick = function () {
+            document.getElementById('cartpageside').style = "transform: translateX(100%);";
+        }
+
+    </script>
+</body>
+
+</html>

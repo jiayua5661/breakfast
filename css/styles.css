@@ -1,0 +1,961 @@
+/* ====================================================================================================================== */
+/*         common  共用        */
+/* ====================================================================================================================== */
+html {
+	background: url(../img/bg3.webp);
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	margin-top: 87px;
+	/*下移導覽的高度*/
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* 元素選取器 */
+h2 {
+	color: rgb(83, 83, 83);
+	text-align: center;
+	line-height: 1.2px;
+	font-size: 35px;
+	letter-spacing: 2px;
+	margin: 0.8rem 0 1rem 0;
+	padding: 0px;
+}
+
+h3 {
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+i {
+	font-size: 24px;
+	line-height: 50px;
+}
+
+hr {
+	border: 1px solid gray;
+}
+
+.ulreset {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.co-info {
+	margin: 20px;
+}
+
+.co-info>li {
+	padding: 6px;
+	border-top: 1px solid #eee;
+}
+
+.co-info>li:first-child {
+	border-top: none;
+}
+
+.sidebar {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+.sidebar>li>a {
+	line-height: 30px;
+	border-left: 3px solid tomato;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	font-size: 18px;
+	display: block;
+}
+
+.sidebar>li>a:hover {
+	background-color: lightgray;
+}
+
+.breadcrumb {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	padding: 20px;
+	background-color: lightgray;
+}
+
+.breadcrumb>li {
+	float: left;
+}
+
+/* 相鄰選取器 */
+.breadcrumb>li+li::before {
+	content: '>';
+}
+
+.fa-facebook:hover {
+	color: #4267B2;
+}
+
+.fa-instagram:hover {
+	color: #E1306C;
+}
+
+.fa-line:hover {
+	color: #06c755;
+}
+
+.fa-hippo:hover {
+	color: rgb(123, 75, 170);
+}
+
+/* class類別選取器 */
+.logo {
+	color: blue;
+	/* font-family: "Pacifico", "Noto Serif TC", serif; */
+	/*字型*/
+	font-weight: 900;
+	/*字重 字的粗細*/
+}
+
+.container {
+	margin: auto;
+	width: 80%;
+}
+
+.h2container {
+	padding: 15px 10px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	margin-top: 50px;
+}
+
+.h2container>ol {
+	color: rgb(99, 99, 99);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.h2container>ol>li::before {
+	text-align: center;
+	display: inline-block;
+	width: 20px;
+	content: ">";
+}
+
+.h2container>ol>li:first-child::before {
+	content: "";
+}
+
+.bg-primary {
+	background-color: tomato;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-3 {
+	margin: 30px;
+}
+
+.m-2 {
+	margin: 20px;
+}
+
+.p-3 {
+	padding: 30px;
+}
+
+.p-1 {
+	padding: 10px;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.border-radius {
+	/*圓角*/
+	border-radius: 10px;
+}
+
+.over-hidden {
+	/*溢出:隱藏*/
+	overflow: hidden;
+}
+
+.float-left {
+	float: left;
+}
+
+.border-bottom-dash {
+	border-bottom: 2px dashed rgba(128, 128, 128, 0.577);
+}
+
+.w-20 {
+	width: 20%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
+.productbox {
+	width: 25%;
+}
+
+.productbox>div {
+	margin: 10px;
+}
+
+.productbox>div:hover {
+	cursor: pointer;
+}
+
+.productbox>div:hover>img {
+	transform: scale(1.07);
+	transition: all 1s;
+}
+
+.productbox>div:hover>p {
+	color: tomato;
+}
+
+.productbox>div>img {
+	width: 100%;
+	padding: 10px;
+}
+
+.productbox p {
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.productbox {
+		width: 50%;
+	}
+}
+
+.w-25 {
+	/*四欄*/
+	width: 25%;
+}
+
+.w-33 {
+	/*三欄*/
+	width: 33.33%;
+}
+
+.w-50 {
+	/*兩欄*/
+	width: 50%;
+}
+
+.w-100 {
+	/*單欄*/
+	width: 100%;
+}
+
+.w-16 {
+	/*六欄*/
+	width: 16.66%;
+}
+
+.btn {
+	padding: 10px 20px;
+	border-radius: 100px;
+	display: inline-block;
+	/*行內塊級屬性*/
+	margin-bottom: 20px;
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+
+.btn-white {
+	border: 1px solid white;
+	color: white;
+	transition: 0.4s all;
+}
+
+.btn-white:hover {
+	background-color: white;
+	color: black;
+}
+
+.btn-primary {
+	border: 1px solid tomato;
+	color: tomato;
+	transition: 0.4s all;
+}
+
+.btn-primary:hover {
+	background-color: tomato;
+	color: white;
+}
+
+.text-white {
+	color: white;
+}
+
+.mr-2 {
+	margin-right: 20px;
+}
+
+.pagetop {
+	position: fixed;
+	/*固定定位*/
+	right: 28px;
+	/*定位在畫面的兩邊距離*/
+	bottom: 28px;
+	background-color: rgba(48, 48, 48, 0.867);
+	color: white;
+	display: none;
+	width: 45px;
+	height: 45px;
+	line-height: 52px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.pagetop:hover {
+	background-color: rgb(39, 39, 39);
+}
+
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+}
+
+.tag {
+	top: 0px;
+	left: 0px;
+	background-color: tomato;
+	margin: 0px;
+	padding: 10px;
+}
+
+.tag-left-bottom {
+	left: 0px;
+	bottom: 0px;
+	background-color: tomato;
+	margin: 0px;
+	padding: 10px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.picbox {
+	transition: 0.4s all;
+}
+
+.picbox:hover {
+	transform: scale(1.05);
+}
+
+.inputmust::after {
+	content: " *";
+	color: red;
+}
+
+.news-msg {
+	display: block;
+	text-align: center;
+}
+
+/* 調整亮度 */
+.filter-8 {
+	filter: brightness(0.8);
+}
+
+.about-egg {
+	position: absolute;
+	left: 50%;
+	top: 140%;
+	transform: translate(-50%, -50%);
+}
+
+.about-p {
+	margin: 0 auto 60px auto;
+	width: 100%;
+	max-width: 650px;
+	padding-top: 520px;
+	letter-spacing: 1px;
+	line-height: 2;
+}
+
+.abput-img1 {
+	opacity: 0;
+	top: 50px;
+	left: 50px;
+	transform: translateX(-200px) rotate(-90deg);
+	transition: 2s all ease-in-out;
+}
+
+.abput-img2 {
+	opacity: 0;
+	top: 200px;
+	left: 150px;
+	transform: translateX(-200px) rotate(-90deg);
+	transition: 2s all ease-in-out;
+}
+
+.abput-img3 {
+	opacity: 0;
+	top: 355px;
+	left: -80px;
+	transform: translateX(-200px) rotate(-90deg);
+	transition: 2s all ease-in-out;
+}
+
+.abput-img4 {
+	opacity: 0;
+	top: 70px;
+	right: 90px;
+	transform: translateX(200px) rotate(90deg);
+	transition: 2s all ease-in-out;
+}
+
+.abput-img5 {
+	opacity: 0;
+	top: 170px;
+	right: -100px;
+	transform: translateX(200px) rotate(90deg);
+	transition: 2s all ease-in-out;
+}
+
+.aboutimg-appear {
+	opacity: 1;
+	transform: translateX(0px) rotate(0deg);
+}
+
+@keyframes bannertexttra {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.bannertext {
+	/* absolute 垂直水平置中 */
+	text-align: center;
+	color: white;
+	line-height: 4rem;
+	letter-spacing: 0.3rem;
+	text-shadow: 1.5px 1.5px gray;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	animation-name: bannertexttra;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-delay: 0.5s;
+}
+
+.bannertextabout {
+	transform: translate(-50%, -90%);
+}
+
+.bannertextproduct {
+	transform: translate(-50%, -80%);
+}
+
+.bannertextproductp {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	transform: translate(-50%, 50%);
+}
+
+.bannertextproductp::after,
+.bannertextproductp::before {
+	content: "";
+	width: 20px;
+	height: 1px;
+	position: absolute;
+	display: block;
+	background: #fff;
+	top: 50%;
+}
+
+.bannertextproductp::after {
+	left: -30px;
+}
+
+.bannertextproductp::before {
+	right: -30px;
+}
+
+/* 動畫 */
+@keyframes bannertra {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.03);
+	}
+}
+
+.bannertrans {
+	animation-name: bannertra;
+	animation-duration: 7s;
+	animation-fill-mode: both;
+	animation-delay: 1s;
+}
+
+/* input[type="text"]:valid {
+	content: "...";
+} */
+
+/* .inputmust:has( input[type="text"]:valid){
+	content: " *";
+	color: red;
+} */
+
+/* ====================================================================================================================== */
+/*         header    頁首         */
+/* ====================================================================================================================== */
+header {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	display: flex;
+	/*固定後塊級元素會跑掉 需重新設定*/
+	justify-content: space-between;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.708);
+	/*rgb透明度*/
+	box-shadow: 0px 0px 10px rgb(128, 128, 128);
+	z-index: 2;
+	/*設定Z軸座標*/
+}
+
+h1 {
+	/* font-family: "Pacifico"; */
+	/*改字型*/
+	/* width: 160px; */
+	margin: 0px;
+	margin-left: 25px;
+	/* float:left; */
+	display: block;
+}
+
+h1>a {
+	/* text-decoration: none; */
+	/* color: black; */
+}
+
+h1>a>img {
+	margin-top: 7px;
+	width: 200px;
+}
+
+nav {
+	display: block;
+	/* float: left; */
+}
+
+nav>ul {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+nav>ul>li {
+	float: left;
+	margin: 0px 12px;
+}
+
+nav>ul>li>a {
+	display: block;
+	/*顯示為塊級元素*/
+	width: 100%;
+	text-align: center;
+	/*文字置中*/
+	line-height: 85px;
+	/*格子高度*/
+	text-decoration: none;
+	/*移除文字裝飾(底線)*/
+	color: black;
+	letter-spacing: 1px;
+	/*字距*/
+	font-weight: 900;
+	font-size: 20px;
+}
+
+nav>ul>li>a:hover {
+	/*滑鼠滑入背景變色*/
+	background-color: lightgray;
+	color: tomato;
+	border-bottom: 2.5px solid tomato;
+}
+
+.productchooselist {}
+
+.productchooselist>ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+
+.productchooselist>ul>li {
+	margin: 30px 8px 15px 8px;
+}
+
+.productchooselist>ul>li>a {
+	color: rgb(81, 81, 81);
+	font-size: 20px;
+	font-weight: 600;
+	border: 1px solid rgb(158, 158, 158);
+	border-radius: 50px;
+	padding: 15px 25px;
+	background-color: rgba(255, 255, 255, 0.579);
+}
+
+.productchooselist>ul>li>a:hover { 
+	color: tomato;
+	border: 1px solid tomato;
+}
+
+.productchooselist>ul>li>a.productthispage {
+	color: tomato;
+	border: 1px solid tomato;
+}
+
+.this-page {
+	border-bottom: 2.5px solid tomato;
+	color: tomato;
+}
+
+.social-icon {
+	/* float: left; */
+	margin-right: 2%;
+	line-height: 87px;
+}
+
+.social-icon>a {
+	margin-right: 10px;
+	color: tomato;
+}
+
+.shoppcarticon {
+	color: tomato;
+}
+
+.shoppcarticon:hover {
+	cursor: pointer;
+}
+
+/* ====================================================================================================================== */
+/*         footer    頁尾         */
+/* ====================================================================================================================== */
+footer {
+	margin-top: 20px;
+	padding: 26px 30px;
+	background-image: url(../img/black_paper.png);
+}
+
+footer * {
+	color: white;
+}
+
+.footer-logo {
+	/* font-family: "Pacifico"; */
+	text-align: center;
+	/*行內元素置中，可在父層設定text-align: center;*/
+	font-size: 30px;
+}
+
+footer>ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	width: 400px;
+	margin: auto;
+	/*塊級元素置中*/
+}
+
+footer>ul>li {
+	float: left;
+	width: 20%;
+	line-height: 40px;
+}
+
+footer>ul>li>a {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+footer .social-icon {
+	float: none;
+	margin-right: 0;
+}
+
+/* ====================================================================================================================== */
+/*         表格         */
+/* ====================================================================================================================== */
+table {
+	border: 1px solid gray;
+	border-collapse: collapse;
+	/*把儲存格間的空隙拿掉*/
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid gray;
+	padding: 8px;
+}
+
+th {
+	background-color: tomato;
+	color: white;
+}
+
+tr:nth-child(even) {
+	/*條件選擇哪些改元素*/
+	background-color: hsl(0, 0%, 81%);
+}
+
+/* ====================================================================================================================== */
+/*         表單         */
+/* ====================================================================================================================== */
+
+label {
+	margin: 5px;
+}
+
+input[type="text"] {
+	display: block;
+	padding: 8px;
+	/*輸入資料格裡的內邊界5以上 資料比較不會貼在格線上*/
+	width: 100%;
+	margin: 10px 10px 10px 0px;
+	border-radius: 4px;
+	border: 1px solid gray;
+
+}
+
+input:focus {
+	background-color: #e2ecff;
+}
+
+form p {
+	margin: 10px 10px 10px 5px;
+}
+
+form textarea {
+	padding: 8px;
+	resize: none;
+	width: 100%;
+	height: 65px;
+	overflow: auto;
+}
+
+
+/* ====================================================================================================================== */
+/*         輪播         */
+/* ====================================================================================================================== */
+
+.bannerbox {
+	position: relative;
+}
+
+.bannerbuttom {
+	position: relative;
+	opacity: 0;
+}
+
+.bannercutimg {
+	left: 0px;
+	top: 0px;
+	/* display: block; */
+	opacity: 0;
+	transition: 1.7s all;
+	position: absolute;
+}
+
+/* ====================================================================================================================== */
+/*         產品方塊         */
+/* ====================================================================================================================== */
+
+.productpage {
+	display: none;
+	padding: 65px;
+	width: 100%;
+	max-width: 1000px;
+	background-color: #ffffff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.productpage>button {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.productpagetext {
+	padding: 30px 0 60px 65px;
+}
+
+.product1esc {
+	background-color: black;
+	padding: 0;
+	margin: 0;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	color: white;
+}
+
+.product1esc:hover {
+	cursor: pointer;
+}
+
+h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	font-weight: 400;
+	color: rgb(60, 60, 60);
+}
+
+.productpagetext p {
+	margin: 10px 0 20px 0;
+	padding: 0 0 15px 0;
+	border-bottom: black solid 1px;
+	color: red;
+}
+
+.productpagetext span {
+	letter-spacing: 1px;
+	line-height: 2;
+}
+
+/* ====================================================================================================================== */
+/*         購物車         */
+/* ====================================================================================================================== */
+
+.cartbox {
+	height: 100%;
+	background-color: white;
+	width: 300px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transform: translateX(100%);
+	transition: all 0.5s;
+}
+
+.cartheader {
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 15px;
+	border-bottom: 2px solid rgba(183, 183, 183, 0.418);
+}
+
+.cartheader>h4 {
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.cartheader>button {
+	text-align: center;
+}
+
+.cartesc {
+	cursor: pointer;
+	border: 0px;
+	background-color: #eeeeee00;
+}
+
+.cartproduct-list {
+	flex: 1 1 auto;
+	height: auto;
+}
+
+.cartbottombox {
+	padding-bottom: 15px;
+}
+
+.totalmoneybox {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	border-top: 2px solid rgba(183, 183, 183, 0.418);
+}
+
+.totalmoneybox p {
+	text-align: center;
+	margin: 0;
+}
+
+.cartbtnbox {
+	padding: 0 15px;
+}
+
+.cartbtn {
+	font-weight: 600;
+	font-size: 16px;
+	width: 100%;
+	padding: 12px 20px;
+	background-color: rgba(255, 99, 71, 0);
+	color: tomato;
+	border: 1px solid tomato;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.cartbtn:hover {
+	background-color: tomato;
+	color: white;
+}

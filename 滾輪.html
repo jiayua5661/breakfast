@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* .bg {
+            background-image: url(./img/bg3.webp);
+            width: 200vh;
+            height: 150vh;
+            position: relative;
+        } */
+        /* 
+        .scollleft {
+            position: absolute;
+            left: -100px;
+            top: 500px;
+        } */
+
+        .intro-text {
+            margin: auto;
+            opacity: 0;
+            transform: translateX(-100px) rotate(-90deg);
+            /* transform: rotate(30deg); */
+            transition: 2s all ease-in-out;
+        }
+
+        .intro-appear {
+            opacity: 1;
+            transform: translateX(200px);
+        }
+
+        .box {
+            height: 500px;
+            width: 500px;
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+
+    <div class="">
+
+
+        <img src="./img/vegS_01.png" alt="" class="intro-text" id="item1">
+        <br>
+
+        <img src="./img/vegS_01.png" alt="" class="intro-text" id="item2">
+
+
+    </div>
+    <br><br>
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        // window.addEventListener('scroll', () => {
+        //     const scrollPositionY = window.pageYOffset;
+        //     const move = document.querySelector('.scollleft');
+        //     move.style.transform = `translateX(${scrollPositionY}px)`;
+        // })
+        for (let i = 1; i < 3; i++) {
+            function scrollAppear() {
+                let introText = document.getElementById(`item${i}`)
+                let itemheight = introText.clientHeight;
+                let introPosition = introText.getBoundingClientRect().top;
+                let screenPosition = window.innerHeight - itemheight;
+
+                if (introPosition < screenPosition) {
+                    introText.classList.add('intro-appear');
+                }
+                if (introPosition > screenPosition) {
+                    introText.classList.remove('intro-appear');
+                }
+            }
+            window.addEventListener("scroll", scrollAppear);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

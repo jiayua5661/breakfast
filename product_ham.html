@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漢堡|美味餐點|早安美芝城</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="">
+        <!-- h1>a{網站名稱} 回上層^navigation 導覽列 -->
+        <!-- h1>a{早安美芝城}^nav>ul>li*4>a{link} -->
+        <h1><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+
+        <nav>
+            <ul class="clearfix">
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+                <li><a href="./product.html" class="this-page">美味餐點</a></li>
+                <li><a href="./store.html">門市據點</a></li>
+                <li><a href="./contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="social-icon">
+            <!-- # 錨點anchor ID -->
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+            <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
+        </div>
+    </header>
+    <!-- ol.breadcrumb>li*2>a  麵包屑-->
+    <ol class="breadcrumb clearfix">
+        <li><a href="./index.html">首頁</a></li>
+        <li>美味餐點</li>
+    </ol>
+
+    <!-- cantainer start -->
+    <!-- .container.clearfix>.w-20.float-left+.w-80.float-left -->
+    <div class="container clearfix">
+        <h2 class="w-100 float-left">美味餐點</h2>
+        <div class="w-20 float-left">
+            <ul class="sidebar">
+                <li><a href="./product_ham.html">漢堡</a></li>
+                <li><a href="./product_omelet.html">蛋餅</a></li>
+                <li><a href="./product_toast.html">吐司</a></li>
+                <li><a href="./product_drinks.html">飲料</a></li>
+            </ul>
+        </div>
+        <div class="w-80 float-left">
+            <div class="m-2">
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham1.jpg" alt="" class="w-100">
+                        <p><a href="">早美雞腿排堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham2.jpg" alt="" class="w-100">
+                        <p><a href="">招牌豬肉堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham3.jpg" alt="" class="w-100">
+                        <p><a href="">黃金蝦餅堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham4.jpg" alt="" class="w-100">
+                        <p><a href="">鮮嫩豬柳堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham5.jpg" alt="" class="w-100">
+                        <p><a href="">紐奧良辣雞堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham6.jpg" alt="" class="w-100">
+                        <p><a href="">里肌豬排堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham7.jpg" alt="" class="w-100">
+                        <p><a href="">卡啦辣雞腿堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham8.jpg" alt="" class="w-100">
+                        <p><a href="">起司豬肉蛋堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham9.jpg" alt="" class="w-100">
+                        <p><a href="">起司辣雞肉蛋堡</a></p>
+                    </div>
+                </div>
+                <div class="productbox float-left">
+                    <div class="m-2">
+                        <img src="./img/prod_ham10.jpg" alt="" class="w-100">
+                        <p><a href="">阿拉斯加鱈魚堡</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <footer>
+        <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
+        <div class="footer-logo">早安美芝城</div>
+        <ul class="clearfix">
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">最新消息</a></li>
+            <li><a href="#">產品介紹</a></li>
+            <li><a href="#">門市資訊</a></li>
+            <li><a href="#">聯絡我們</a></li>
+        </ul>
+        <!-- 水平線 -->
+        <hr>
+        <p class="text-center">
+            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
+        </p>
+        <div class="social-icon text-center">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
+    </footer>
+    <a href="#" class="pagetop"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="#" class="booking">線上訂餐</a>
+
+</body>
+
+</html>

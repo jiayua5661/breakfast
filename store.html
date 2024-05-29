@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門市據點|早安美芝城</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;900&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="">
+        <!-- h1>a{網站名稱} 回上層^navigation 導覽列 -->
+        <!-- h1>a{早安美芝城}^nav>ul>li*4>a{link} -->
+        <h1><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+
+        <nav>
+            <ul class="clearfix">
+                <li><a href="./about.html">關於我們</a></li>
+                <li><a href="./news.html">最新消息</a></li>
+                <li><a href="./product.html">美味餐點</a></li>
+                <li><a href="./store.html" class="this-page">門市據點</a></li>
+                <li><a href="./contact.html">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <div class="social-icon">
+            <!-- # 錨點anchor ID -->
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+            <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
+        </div>
+    </header>
+    
+    <!-- banner -->
+    <div class="bannerbox w-100 over-hidden">
+        <img src="./img/ban_store.jpg" alt="" class="w-100 bannertrans">
+    </div>
+
+    <!-- 分頁大標題 -->
+    <div class="container h2container">
+        <h2>門市據點</h2>
+        <ol>
+            <li>首頁</li>
+            <li>門市據點</li>
+        </ol>
+    </div>
+
+
+
+
+    <!-- ol.breadcrumb>li*2>a  麵包屑
+    <ol class="breadcrumb clearfix">
+        <li><a href="./index.html">首頁</a></li>
+        <li>門市據點</li>
+    </ol> -->
+
+    <!-- cantainer start -->
+    <!-- .container.clearfix>.w-20.float-left+.w-80.float-left -->
+    <div class="container clearfix">
+        <!-- <h2 class="w-100 float-left">門市據點</h2> -->
+        <div class="w-20 float-left">
+            <ul class="sidebar">
+                <li><a href="">北部</a></li>
+                <li><a href="">中部</a></li>
+                <li><a href="">南部</a></li>
+            </ul>
+        </div>
+        <div class="w-80 float-left">
+            <div class="m-2 clearfix">
+                <!-- table>tr>th{標題列}*5^tr*3>td{儲存格}*5 -->
+                <table>
+                    <tr>
+                        <th>門市名稱</th>
+                        <th>電話</th>
+                        <th>地址</th>
+                        <th>撥號</th>
+                        <th>導航</th>
+                    </tr>
+                    <tr>
+                        <td>北市寶興概念店</td>
+                        <td>02-23050189</td>
+                        <td>台北市萬華區寶興街47號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>北市木新概念店</td>
+                        <td>02-86615680</td>
+                        <td>台北市文山區忠順街一段26巷15號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>北市內湖概念店</td>
+                        <td>02-87513038</td>
+                        <td>台北市內湖區內湖路1段602號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>北市永吉概念店</td>
+                        <td>02-27560155</td>
+                        <td>台北市信義區永吉路326巷42號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>南港忠孝</td>
+                        <td>02-27831177</td>
+                        <td>台北市南港區忠孝東路7段613號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>北市活力崇德</td>
+                        <td>02-87322303</td>
+                        <td>台北市信義區崇德街92號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>信義松德</td>
+                        <td>02-27597911</td>
+                        <td>台北市信義區松德路211號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>台中忠明概念店</td>
+                        <td>04-22029402</td>
+                        <td>台中市北區忠明路369號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>潭子活力福貴</td>
+                        <td>04-25371098</td>
+                        <td>台中市潭子區福貴路233號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>台中活力健行店</td>
+                        <td>04-22353598</td>
+                        <td>台中市北區健行路174號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>潭子活力福潭</td>
+                        <td>04-25393737</td>
+                        <td>台中市潭子區福潭路872號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>嘉義嘉北</td>
+                        <td>05-2772428</td>
+                        <td>嘉義市東區嘉北街97巷12號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>新港媽祖廟</td>
+                        <td>05-3741363</td>
+                        <td>嘉義縣新港鄉宮前村登雲路60號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>早安東石</td>
+                        <td>05-3732980</td>
+                        <td>嘉義縣東石鄉東石村197號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                    <tr>
+                        <td>善化活力中山</td>
+                        <td>06-5852892</td>
+                        <td>台南市善化區中山路138號</td>
+                        <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                        <td class="text-center"><i class="fa-solid fa-location-dot"></i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- container end -->
+
+    <footer>
+        <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
+        <div class="footer-logo">早安美芝城</div>
+        <ul class="clearfix">
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">最新消息</a></li>
+            <li><a href="#">產品介紹</a></li>
+            <li><a href="#">門市資訊</a></li>
+            <li><a href="#">聯絡我們</a></li>
+        </ul>
+        <!-- 水平線 -->
+        <hr>
+        <p class="text-center">
+            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
+        </p>
+        <div class="social-icon text-center">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
+    </footer>
+    <a href="#" class="pagetop"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="#" class="booking">線上訂餐</a>
+
+</body>
+
+</html>
