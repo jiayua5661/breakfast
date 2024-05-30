@@ -839,7 +839,7 @@ form textarea {
 	padding: 30px 0 60px 65px;
 }
 
-.product1esc {
+.productesc {
 	background-color: black;
 	padding: 0;
 	margin: 0;
@@ -849,7 +849,7 @@ form textarea {
 	color: white;
 }
 
-.product1esc:hover {
+.productesc:hover {
 	cursor: pointer;
 }
 
@@ -918,6 +918,71 @@ h4 {
 .cartproduct-list {
 	flex: 1 1 auto;
 	height: auto;
+	overflow-y: auto;
+}
+
+.cartproduct-list>ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cartproduct-list>ul li {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.cartproduct-list>ul li>i {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 15px;
+}
+
+.cartproduct-list>ul li img {
+	width: 70px;
+	margin-right: 10px;
+}
+
+.cartproduct-list button {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	display: inline-block;
+}
+
+.cartProdRight {
+	flex: 1 1 auto;
+}
+
+.cartProdRight p {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.pricenumber {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.pricenumber p {
+	margin: 0;
+}
+
+.prodnumber {
+	display: flex;
+	justify-content: space-between;
+}
+
+.prodnumber input {
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	height: 20px;
+	text-align: center;
 }
 
 .cartbottombox {

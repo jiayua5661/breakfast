@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cart {
+            width: 100px;
+        }
+
+        .cart>ul {
+            list-style: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn" onclick="addToCartList(p1)">商品1</button>
+    <input type="number" value="1">
+    <button class="btn" onclick="addToCartList(p2)">商品2</button>
+
+    <div class="cart">
+        <ul id="cartul">
+
+        </ul>
+
+    </div>
+    
+    <script>
+        let productList = [
+            { "id": "p1", "name": "商品1", "price": 100 },
+            { "id": "p2", "name": "商品2", "price": 150 },
+        ];
+
+        // console.log(p1);
+
+        let cartList = [];
+        let cartul = document.getElementById('cartul');
+
+
+        // 整合多個 新增到購物車按鈕
+        function addToCartList(x) {
+            for (i = 0; i < productList.length; i++) {
+                if (productList[i].id == x.id) {
+                    cartList.push(productList[i]);
+                    console.log(cartList);
+                    cartul.innerHTML += `<li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>`;
+                }
+            }
+        }
+
+        // 新增商品1
+        // p1.onclick = function () {
+        //     for (i = 0; i < productList.length; i++) {
+        //         if (productList[i].id == p1.id) {
+        //             cartList.push(productList[i]);
+        //             console.log(cartList);
+        //             let creat = document.createElement('li');
+        //             creat.innerHTML = `<li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>`;
+        //             cartul.appendChild(creat);
+        //         }
+        //     }
+        //     showcart();
+        // }
+
+        // 新增商品2
+        // p2.onclick = function () {
+        //     for (let i = 0; i < productList.length; i++) {
+        //         if (productList[i].id == p2.id) {
+        //             cartList.push(productList[i]);
+        //             console.log(cartList);
+        //             let creat = document.createElement('li');
+        //             creat.innerHTML = `<li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>`;
+        //             cartul.appendChild(creat);
+        //         }
+        //     }
+        //     showcart();
+        // }
+
+        function showcart() {
+            for (let i = 0; i < cartList.length; i++) {
+                // console.log(`第${i}個`);
+                // console.log(cartList[i]);
+
+            }
+        }
+
+
+
+        // var cart_list_template =
+        //     <li class='shop-item'> {{ name }}
+        //         <input data-list='{{listid}}' data-prod='{{prodtag}}' type='number' min='1' value='{{quantity}}' />
+        //         <div class='price'>{{ price }}</div> <div data-delid='{{delid}}' data-prodid='{{prodid}}' class='btn-del'>
+        //             <i class='fas fa-times'></i>
+        //         </div>
+        //     </li>;
+
+    </script>
+</body>
+
+</html>
