@@ -107,24 +107,24 @@
     <!-- 餐點分頁 -->
     <div class="productpage clearfix" id="product1page">
         <button id="product1esc" class="productesc"><i class="fa-solid fa-xmark"></i></button>
-        <div class="w-50 float-left"><img src="./img/prod_ham1.jpg" alt=""></div>
+        <div class="w-50 float-left"><img src="./img/cartproduct/ham01.jpg" alt=""></div>
         <div class="w-50 float-left productpagetext">
             <h4>早美雞腿排堡</h4>
             <p>368.6kcal</p>
             <span>原塊去骨雞腿排，裹上酥薄麵衣烘烤鎖住雞肉鮮甜，無法抵擋的誘人滋味！<br><br>
                 內容物：雞腿排、洋蔥絲、番茄片、美生菜</span><br>
-            <button onclick="addToCartList('p1')">加入購物車</button>
+            <button onclick="addToCartList('ham01')">加入購物車</button>
         </div>
     </div>
     <div class="productpage clearfix" id="product2page">
         <button id="product2esc" class="productesc"><i class="fa-solid fa-xmark"></i></button>
-        <div class="w-50 float-left"><img src="./img/prod_ham2.jpg" alt=""></div>
+        <div class="w-50 float-left"><img src="./img/cartproduct/ham02.jpg" alt=""></div>
         <div class="w-50 float-left productpagetext">
             <h4>招牌豬肉堡</h4>
             <p>335.9Kcal</p>
             <span>美芝城經典招牌豬肉排，特選台灣豬肉 原塊前腿肉攪碎，搭配新鮮洋蔥紅蘿蔔用心製成，無添加防腐劑與色素，佐以清脆甘甜的美生菜與番茄片，兼具美味營養！<br><br>
                 內容物：麵包、漢堡肉、番茄醬、黑胡椒、洋蔥絲、番茄片、美生菜</span><br>
-            <button onclick="addToCartList('p2')">加入購物車</button>
+            <button onclick="addToCartList('ham02')">加入購物車</button>
         </div>
     </div>
 
@@ -163,8 +163,9 @@
         <!-- 購物車商品 -->
         <div class="cartproduct-list">
             <ul id="cartul">
-                <li>
-                    <i class="fa-solid fa-xmark"></i>
+                <!-- 範例 -->
+                <!-- <li id="cartLiham01">
+                    <i class="fa-solid fa-xmark" onclick="removeCartProd('123')"></i>
                     <div>
                         <img src="./img/cartproduct/ham01.jpg" alt="">
                     </div>
@@ -174,12 +175,12 @@
                             <p>NT:100</p>
                             <div class="prodnumber">
                                 <button>-</button>
-                                <input type="text" value="1">
-                                <button>+</button>
+                                <input type="text" value="1" id="">
+                                <button onclick="cartProdAdd('ham01')">+</button>
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
 
@@ -187,7 +188,7 @@
         <div class="cartbottombox">
             <div class="totalmoneybox">
                 <p>小計:</p>
-                <p>NT$</p>
+                <p id="cartTotalmoney">NT:</p>
             </div>
             <div class="cartbtnbox">
                 <button class="cartbtn m-b-10">查詢購物車</button>
@@ -197,13 +198,14 @@
     </div>
 
     <script>
-        // 商品分頁
+        // 商品分頁 漢堡1
         document.getElementById('productham1').onclick = function () {
             document.getElementById('product1page').style = 'display: block;';
         }
         document.getElementById('product1esc').onclick = function () {
             document.getElementById('product1page').style = 'display: none;';
         }
+        // 商品分頁 漢堡2
         document.getElementById('productham2').onclick = function () {
             document.getElementById('product2page').style = 'display: block;';
         }
@@ -223,11 +225,10 @@
 
         // 餐點表
         let productList = [
-            { "id": "p1", "name": "早美雞腿排堡", "price": 50 },
-            { "id": "p2", "name": "招牌豬肉堡", "price": 55 },
+            { "id": "ham01", "name": "早美雞腿排堡", "price": 50 },
+            { "id": "ham02", "name": "招牌豬肉堡", "price": 55 },
         ];
         // 購物車list
-        let totalmoney = 0;
         let cartList = [];
         let cartul = document.getElementById('cartul');
         // 加入購物車
@@ -235,24 +236,93 @@
             for (let i = 0; i < productList.length; i++) {
                 // 找商品列表有沒有
                 if (productList[i].id == x) {
+                    let temp = 1;
                     // 找購物車有沒有
-                    for(let k = 0; k < cartList.length; k++){
+                    for (let k = 0; k < cartList.length; k++) {
                         // 如果有數量+1
-                        if(cartList[k].id == x){
+                        if (cartList[k].id == x) {
+                            temp = 0;
                             cartList[k].number++;
+                            document.getElementById(`cartproductnumber${x}`).value++;
                         }
                     }
-                    cartList.push(productList[i]);
-                    cartList[cartList.length-1]['number'] = 1;
-                    console.log(cartList);
-                    cartul.innerHTML += `<li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>`;
+                    if (temp) {
+                        cartList.push(productList[i]);
+                        cartList[cartList.length - 1]['number'] = 1;
+                        cartul.innerHTML += `<li id="cartLi${x}">
+                        <i class="fa-solid fa-xmark" onclick="removeCartProd('${x}')"></i>
+                        <div>
+                            <img src="./img/cartproduct/${x}.jpg" alt="">
+                        </div>
+                        <div class="cartProdRight">
+                            <p>${productList[i].name}</p>
+                            <div class="pricenumber w-100">
+                                <p>NT:${productList[i].price}</p>
+                                <div class="prodnumber">
+                                    <button onclick="cartProdMinu('${x}')">-</button>
+                                    <input type="text" value="1" id='cartproductnumber${x}'>
+                                    <button onclick="cartProdAdd('${x}')">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>`;
+                        // 避免新增li後 前面的input.value 被改回預設值
+                        for (let k = 0; k < cartList.length; k++) {
+                            document.getElementById(`cartproductnumber${cartList[k].id}`).value = cartList[k].number;
+                        }
+                    }
                 }
             }
+            totalmoney();
         }
 
-        // 購物車商品數量增加
-        function cartProdAdd(){
-            
+
+        // <li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>
+
+
+        // 購物車商品+號數量增加
+        function cartProdAdd(y = "") {
+            for (let k = 0; k < cartList.length; k++) {
+                if (cartList[k].id == y) {
+                    cartList[k].number++;
+                    document.getElementById(`cartproductnumber${y}`).value++;
+                }
+            }
+            totalmoney();
+        }
+
+        // 購物車商品-號數量減少
+        function cartProdMinu(z = "") {
+            for (let k = 0; k < cartList.length; k++) {
+                if (cartList[k].id == z) {
+                    cartList[k].number--;
+                    document.getElementById(`cartproductnumber${z}`).value--;
+                    if (cartList[k].number == 0) {
+                        cartList.splice(k, 1);
+                        document.getElementById('cartul').removeChild(document.getElementById(`cartLi${z}`));
+                    }
+                }
+            }
+            totalmoney();
+        }
+
+        // 叉叉按鈕
+        function removeCartProd(z = "") {
+            for (let k = 0; k < cartList.length; k++) {
+                if (cartList[k].id == z) {
+                    cartList.splice(k, 1);
+                    document.getElementById('cartul').removeChild(document.getElementById(`cartLi${z}`));
+                }
+            }
+            totalmoney();
+        }
+
+        function totalmoney() {
+            let total = 0;
+            for(let i=0; i < cartList.length; i++){
+                total += cartList[i].price*cartList[i].number;
+            }
+            document.getElementById('cartTotalmoney').innerHTML = `NT:${total}`;
         }
     </script>
 </body>
