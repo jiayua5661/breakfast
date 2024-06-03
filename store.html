@@ -35,10 +35,11 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-line"></i></a>
+            <i class="fa-solid fa-cart-shopping shoppcarticon" id="shopcart"></i>
             <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
         </div>
     </header>
-    
+
     <!-- banner -->
     <div class="bannerbox w-100 over-hidden">
         <img src="./img/ban_store.jpg" alt="" class="w-100 bannertrans">
@@ -199,16 +200,16 @@
         <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
         <div class="footer-logo">早安美芝城</div>
         <ul class="clearfix">
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">最新消息</a></li>
-            <li><a href="#">產品介紹</a></li>
-            <li><a href="#">門市資訊</a></li>
-            <li><a href="#">聯絡我們</a></li>
+            <li><a href="./about.html">關於我們</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./product.html">美味餐點</a></li>
+            <li><a href="./store.html">門市資訊</a></li>
+            <li><a href="./contact.html">聯絡我們</a></li>
         </ul>
         <!-- 水平線 -->
         <hr>
         <p class="text-center">
-            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <a href="./product.html" class="btn btn-white mr-2">線上點餐</a>
             <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
         </p>
         <div class="social-icon text-center">
@@ -218,8 +219,55 @@
         </div>
         <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
     </footer>
-    <a href="#" class="pagetop"><i class="fa-solid fa-arrow-up"></i></a>
-    <a href="#" class="booking">線上訂餐</a>
+    <a href="#" class="pagetop" id="backtotop"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- 購物車 -->
+    <div class="cartbox" id="cartpageside">
+        <div class="cartheader">
+            <h4>購物車</h4>
+            <button class="cartesc" id="cartpagesideesc"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- 購物車商品 -->
+        <div class="cartproduct-list">
+            <ul id="cartul">
+                <!-- 範例 -->
+                <!-- <li id="cartLiham01">
+                                <i class="fa-solid fa-xmark" onclick="removeCartProd('123')"></i>
+                                <div>
+                                    <img src="./img/cartproduct/ham01.jpg" alt="">
+                                </div>
+                                <div class="cartProdRight">
+                                    <p>早美雞腿排堡</p>
+                                    <div class="pricenumber w-100">
+                                        <p>NT:100</p>
+                                        <div class="prodnumber">
+                                            <button>-</button>
+                                            <input type="text" value="1" id="">
+                                            <button onclick="cartProdAdd('ham01')">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> -->
+            </ul>
+        </div>
+
+        <!-- 購物車結帳 -->
+        <div class="cartbottombox">
+            <div class="totalmoneybox">
+                <p>小計:</p>
+                <p id="cartTotalmoney">NT:</p>
+            </div>
+            <div class="cartbtnbox">
+                <button class="cartbtn m-b-10">查詢購物車</button>
+                <button class="cartbtn" onclick="checkout()">結帳</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/cartListOther.js"></script>
+    <script src="./js/backtotop.js"></script>
+
 
 </body>
 

@@ -77,6 +77,8 @@
                 let itemheight = introText.clientHeight;
                 let introPosition = introText.getBoundingClientRect().top;
                 let screenPosition = window.innerHeight - itemheight;
+                console.log(window.innerHeight);
+                console.log(window.scrollY);
 
                 if (introPosition < screenPosition) {
                     introText.classList.add('intro-appear');

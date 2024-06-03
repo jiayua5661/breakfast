@@ -132,16 +132,16 @@
         <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
         <div class="footer-logo">早安美芝城</div>
         <ul class="clearfix">
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">最新消息</a></li>
-            <li><a href="#">產品介紹</a></li>
-            <li><a href="#">門市資訊</a></li>
-            <li><a href="#">聯絡我們</a></li>
+            <li><a href="./about.html">關於我們</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./product.html">美味餐點</a></li>
+            <li><a href="./store.html">門市資訊</a></li>
+            <li><a href="./contact.html">聯絡我們</a></li>
         </ul>
         <!-- 水平線 -->
         <hr>
         <p class="text-center">
-            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <a href="./product.html" class="btn btn-white mr-2">線上點餐</a>
             <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
         </p>
         <div class="social-icon text-center">
@@ -151,7 +151,7 @@
         </div>
         <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
     </footer>
-    <a href="#" class="pagetop"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="#" class="pagetop" id="backtotop"><i class="fa-solid fa-arrow-up"></i></a>
 
     <!-- 購物車 -->
     <div class="cartbox" id="cartpageside">
@@ -192,139 +192,13 @@
             </div>
             <div class="cartbtnbox">
                 <button class="cartbtn m-b-10">查詢購物車</button>
-                <button class="cartbtn">結帳</button>
+                <button class="cartbtn" onclick="checkout()">結帳</button>
             </div>
         </div>
     </div>
 
-    <script>
-        // 商品分頁 漢堡1
-        document.getElementById('productham1').onclick = function () {
-            document.getElementById('product1page').style = 'display: block;';
-        }
-        document.getElementById('product1esc').onclick = function () {
-            document.getElementById('product1page').style = 'display: none;';
-        }
-        // 商品分頁 漢堡2
-        document.getElementById('productham2').onclick = function () {
-            document.getElementById('product2page').style = 'display: block;';
-        }
-        document.getElementById('product2esc').onclick = function () {
-            document.getElementById('product2page').style = 'display: none;';
-        }
+    <script src="./js/cartListproduct.js"></script>
 
-
-        // 開啟 關閉購物車
-        document.getElementById('shopcart').onclick = function () {
-            document.getElementById('cartpageside').style = "transform: translateX(0%);";
-        }
-        document.getElementById('cartpagesideesc').onclick = function () {
-            document.getElementById('cartpageside').style = "transform: translateX(100%);";
-        }
-
-
-        // 餐點表
-        let productList = [
-            { "id": "ham01", "name": "早美雞腿排堡", "price": 50 },
-            { "id": "ham02", "name": "招牌豬肉堡", "price": 55 },
-        ];
-        // 購物車list
-        let cartList = [];
-        let cartul = document.getElementById('cartul');
-        // 加入購物車
-        function addToCartList(x = "") {
-            for (let i = 0; i < productList.length; i++) {
-                // 找商品列表有沒有
-                if (productList[i].id == x) {
-                    let temp = 1;
-                    // 找購物車有沒有
-                    for (let k = 0; k < cartList.length; k++) {
-                        // 如果有數量+1
-                        if (cartList[k].id == x) {
-                            temp = 0;
-                            cartList[k].number++;
-                            document.getElementById(`cartproductnumber${x}`).value++;
-                        }
-                    }
-                    if (temp) {
-                        cartList.push(productList[i]);
-                        cartList[cartList.length - 1]['number'] = 1;
-                        cartul.innerHTML += `<li id="cartLi${x}">
-                        <i class="fa-solid fa-xmark" onclick="removeCartProd('${x}')"></i>
-                        <div>
-                            <img src="./img/cartproduct/${x}.jpg" alt="">
-                        </div>
-                        <div class="cartProdRight">
-                            <p>${productList[i].name}</p>
-                            <div class="pricenumber w-100">
-                                <p>NT:${productList[i].price}</p>
-                                <div class="prodnumber">
-                                    <button onclick="cartProdMinu('${x}')">-</button>
-                                    <input type="text" value="1" id='cartproductnumber${x}'>
-                                    <button onclick="cartProdAdd('${x}')">+</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>`;
-                        // 避免新增li後 前面的input.value 被改回預設值
-                        for (let k = 0; k < cartList.length; k++) {
-                            document.getElementById(`cartproductnumber${cartList[k].id}`).value = cartList[k].number;
-                        }
-                    }
-                }
-            }
-            totalmoney();
-        }
-
-
-        // <li><p>${productList[i].name}</p><P>NT:${productList[i].price}</P> <input type="number" value="1"></li>
-
-
-        // 購物車商品+號數量增加
-        function cartProdAdd(y = "") {
-            for (let k = 0; k < cartList.length; k++) {
-                if (cartList[k].id == y) {
-                    cartList[k].number++;
-                    document.getElementById(`cartproductnumber${y}`).value++;
-                }
-            }
-            totalmoney();
-        }
-
-        // 購物車商品-號數量減少
-        function cartProdMinu(z = "") {
-            for (let k = 0; k < cartList.length; k++) {
-                if (cartList[k].id == z) {
-                    cartList[k].number--;
-                    document.getElementById(`cartproductnumber${z}`).value--;
-                    if (cartList[k].number == 0) {
-                        cartList.splice(k, 1);
-                        document.getElementById('cartul').removeChild(document.getElementById(`cartLi${z}`));
-                    }
-                }
-            }
-            totalmoney();
-        }
-
-        // 叉叉按鈕
-        function removeCartProd(z = "") {
-            for (let k = 0; k < cartList.length; k++) {
-                if (cartList[k].id == z) {
-                    cartList.splice(k, 1);
-                    document.getElementById('cartul').removeChild(document.getElementById(`cartLi${z}`));
-                }
-            }
-            totalmoney();
-        }
-
-        function totalmoney() {
-            let total = 0;
-            for(let i=0; i < cartList.length; i++){
-                total += cartList[i].price*cartList[i].number;
-            }
-            document.getElementById('cartTotalmoney').innerHTML = `NT:${total}`;
-        }
-    </script>
 </body>
 
 </html>

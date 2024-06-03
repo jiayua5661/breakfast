@@ -10,15 +10,15 @@
             };
         }
         const throttleBackTop = throttle(() => {
-            if (window.pageYOffset < 100) {
+            if (window.scrollY < 100) {
                 document.getElementById('backtotop').style = "display: none;"
                 console.log("隱藏");
             }
             else {
                 document.getElementById('backtotop').style = "display: block;"
                 console.log("出現");
-            }
-        }, 500);
+            }            
+        }, 300);
         // 呼叫
         window.addEventListener("scroll", () => {
             throttleBackTop();

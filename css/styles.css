@@ -10,6 +10,7 @@ body {
 	margin: 0;
 	margin-top: 87px;
 	/*下移導覽的高度*/
+	overflow-x: hidden;
 }
 
 * {
@@ -233,8 +234,8 @@ hr {
 }
 
 .productbox>div:hover>img {
-	transform: scale(1.07);
-	transition: all 1s;
+	transform: scale(1.05);
+	transition: all 0.3s;
 }
 
 .productbox>div:hover>p {
@@ -256,6 +257,45 @@ hr {
 	.productbox {
 		width: 50%;
 	}
+}
+
+.newsbox {
+	width: 33%;
+}
+
+.newsbox>div {
+	margin: 10px;
+	padding: 20px;
+}
+
+.newsbox>div:hover {
+	cursor: pointer;
+}
+
+.newsbox>div:hover>img {
+	transform: scale(1.03);
+	transition: all 0.3s;
+}
+
+.newsbox>div:hover>p {
+	color: tomato;
+}
+
+.newsbox>div>img {
+	width: 100%;
+	padding: 10px;
+}
+
+.newsbox p {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 10px;
+}
+
+.newsbox span {
+	margin-left: 10px;
+	color: rgb(78, 78, 78);
+	font-size: 15px;
 }
 
 .w-25 {
@@ -728,6 +768,14 @@ footer .social-icon {
 	margin-right: 0;
 }
 
+footer>p.text-center {
+	margin-bottom: 0;
+}
+
+footer .social-icon {
+	line-height: 46px;
+}
+
 /* ====================================================================================================================== */
 /*         表格         */
 /* ====================================================================================================================== */
@@ -958,6 +1006,11 @@ h4 {
 	font-size: 15px;
 }
 
+.cartproduct-list>ul li>i:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
 .cartproduct-list>ul li img {
 	width: 70px;
 	margin-right: 10px;
@@ -977,6 +1030,7 @@ h4 {
 .cartProdRight p {
 	margin-top: 5px;
 	margin-bottom: 20px;
+	font-weight: 600;
 }
 
 .pricenumber {
