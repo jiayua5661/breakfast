@@ -35,7 +35,9 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-line"></i></a>
-            <i class="fa-solid fa-cart-shopping shoppcarticon" id="shopcart"><div id="shopcartnumber">0</div></i>
+            <i class="fa-solid fa-cart-shopping shoppcarticon" id="shopcart">
+                <div id="shopcartnumber">0</div>
+            </i>
             <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
         </div>
     </header>
@@ -69,8 +71,14 @@
         <!-- <h2 class="w-100 float-left">門市據點</h2> -->
         <div class="w-100 float-left">
             <div class="m-2 clearfix">
+                <div class="storesearch clearfix">
+                    <p class="float-left">地址查詢:</p>
+                    <input type="text" id="inputadd" class="float-left">
+                    <button onclick="searchstore()" class="storesearchBtn" class="float-left">搜尋</button>
+                </div>
+                    
                 <!-- table>tr>th{標題列}*5^tr*3>td{儲存格}*5 -->
-                <table>
+                <table id="mapstoreList">
                     <tr>
                         <th>門市名稱</th>
                         <th>電話</th>
@@ -83,14 +91,16 @@
                         <td>02-23050189</td>
                         <td>台北市萬華區寶興街47號</td>
                         <td class="text-center"><i class="fa-solid fa-phone"></i></td>
-                        <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i class="fa-solid fa-location-dot"></i></a></td>
+                        <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i
+                                    class="fa-solid fa-location-dot"></i></a></td>
                     </tr>
                     <tr>
                         <td>北市木新概念店</td>
                         <td>02-86615680</td>
                         <td>台北市文山區忠順街一段26巷15號</td>
                         <td class="text-center"><i class="fa-solid fa-phone"></i></td>
-                        <td class="text-center"><a href="https://maps.app.goo.gl/DwF1kSqeKTTkVxZg9"><i class="fa-solid fa-location-dot"></i></a></td>
+                        <td class="text-center"><a href="https://maps.app.goo.gl/DwF1kSqeKTTkVxZg9"><i
+                                    class="fa-solid fa-location-dot"></i></a></td>
                     </tr>
                     <tr>
                         <td>北市內湖概念店</td>
@@ -260,7 +270,7 @@
 
     <script src="./js/cartListOther.js"></script>
     <script src="./js/backtotop.js"></script>
-
+    <script src="./js/storesearch.js"></script>
 
 </body>
 
