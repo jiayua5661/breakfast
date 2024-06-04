@@ -55,6 +55,7 @@
                         </div>
                     </li>`;
             }
+            cartListNumber();
             totalmoney();
         }
 
@@ -104,6 +105,7 @@
                     }
                 }
             }
+            cartListNumber();
             totalmoney();
         }
 
@@ -120,6 +122,7 @@
                     document.getElementById(`cartproductnumber${y}`).value++;
                 }
             }
+            cartListNumber();
             totalmoney();
         }
 
@@ -137,6 +140,7 @@
                     }
                 }
             }
+            cartListNumber();
             totalmoney();
         }
 
@@ -149,6 +153,7 @@
                     document.getElementById('cartul').removeChild(document.getElementById(`cartLi${z}`));
                 }
             }
+            cartListNumber();
             totalmoney();
         }
 
@@ -166,10 +171,20 @@
             document.getElementById('cartul').innerHTML = "";
             cartList = [];
             cartListchange();
+            cartListNumber();
             totalmoney();
         }
 
         // 購物車暫存
         function cartListchange() {
             localStorage.setItem('autosave', JSON.stringify(cartList));
+        }
+
+        // 購物車商品數量
+        function cartListNumber(){
+            let cartNumber = 0;
+            for(let i = 0; i < cartList.length; i++){
+                cartNumber += cartList[i].number;
+            }
+            document.getElementById('shopcartnumber').innerHTML = cartNumber;
         }

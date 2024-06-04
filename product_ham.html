@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>漢堡|美味餐點|早安美芝城</title>
+    <title>美味餐點|早安美芝城</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,8 +23,8 @@
 
         <nav>
             <ul class="clearfix">
-                <li><a href="./news.html">最新消息</a></li>
                 <li><a href="./about.html">關於我們</a></li>
+                <li><a href="./news.html">最新消息</a></li>
                 <li><a href="./product.html" class="this-page">美味餐點</a></li>
                 <li><a href="./store.html">門市據點</a></li>
                 <li><a href="./contact.html">聯絡我們</a></li>
@@ -35,108 +35,113 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-line"></i></a>
+            <i class="fa-solid fa-cart-shopping shoppcarticon" id="shopcart"><div id="shopcartnumber">0</div></i>
             <!-- <a href="#"><i class="fa-solid fa-hippo"></i></a> -->
         </div>
     </header>
-    <!-- ol.breadcrumb>li*2>a  麵包屑-->
-    <ol class="breadcrumb clearfix">
-        <li><a href="./index.html">首頁</a></li>
-        <li>美味餐點</li>
-    </ol>
 
-    <!-- cantainer start -->
-    <!-- .container.clearfix>.w-20.float-left+.w-80.float-left -->
+    <!-- banner -->
+    <div class="bannerbox w-100">
+        <img src="./img/banner3.jpg" alt="" class="w-100 filter-8">
+        <h3 class="bannertext bannertextproduct">精心研發獨特菜色<br> 享受美味好生活</h3>
+        <p class="bannertext bannertextproductp">美味餐點</p>
+    </div>
+
+    <!-- 分頁大標題 -->
+    <div class="container h2container">
+        <h2>美味餐點</h2>
+        <ol>
+            <li>首頁</li>
+            <li>美味餐點</li>
+            <li>漢堡</li>
+        </ol>
+    </div>
+
+
+    <!-- 選擇分類 -->
+    <div class="productchooselist">
+        <ul>
+            <li><a href="./product.html">熱門餐點</a></li>
+            <li><a href="./product_ham.html"  class="productthispage">漢堡</a></li>
+            <li><a href="./product_toast.html">吐司</a></li>
+            <li><a href="./product_omelt.html">蛋餅</a></li>
+            <li><a href="./product_drinks.html">飲料</a></li>
+            <li><a href="./product_all.html">全部餐點</a></li>
+        </ul>
+    </div>
+
+    <!-- 商品方塊 -->
     <div class="container clearfix">
-        <h2 class="w-100 float-left">美味餐點</h2>
-        <div class="w-20 float-left">
-            <ul class="sidebar">
-                <li><a href="./product_ham.html">漢堡</a></li>
-                <li><a href="./product_omelet.html">蛋餅</a></li>
-                <li><a href="./product_toast.html">吐司</a></li>
-                <li><a href="./product_drinks.html">飲料</a></li>
-            </ul>
+        <div class="productbox float-left">
+            <div id="productham1">
+                <img src="./img/prod_ham1.jpg" alt="">
+                <p>早美雞腿排堡</p>
+            </div>
         </div>
-        <div class="w-80 float-left">
-            <div class="m-2">
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham1.jpg" alt="" class="w-100">
-                        <p><a href="">早美雞腿排堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham2.jpg" alt="" class="w-100">
-                        <p><a href="">招牌豬肉堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham3.jpg" alt="" class="w-100">
-                        <p><a href="">黃金蝦餅堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham4.jpg" alt="" class="w-100">
-                        <p><a href="">鮮嫩豬柳堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham5.jpg" alt="" class="w-100">
-                        <p><a href="">紐奧良辣雞堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham6.jpg" alt="" class="w-100">
-                        <p><a href="">里肌豬排堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham7.jpg" alt="" class="w-100">
-                        <p><a href="">卡啦辣雞腿堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham8.jpg" alt="" class="w-100">
-                        <p><a href="">起司豬肉蛋堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham9.jpg" alt="" class="w-100">
-                        <p><a href="">起司辣雞肉蛋堡</a></p>
-                    </div>
-                </div>
-                <div class="productbox float-left">
-                    <div class="m-2">
-                        <img src="./img/prod_ham10.jpg" alt="" class="w-100">
-                        <p><a href="">阿拉斯加鱈魚堡</a></p>
-                    </div>
-                </div>
+        <div class="productbox float-left">
+            <div id="productham2">
+                <img src="./img/prod_ham2.jpg" alt="">
+                <p>招牌豬肉堡</p>
+            </div>
+        </div>
+        <div class="productbox float-left">
+            <div>
+                <img src="./img/prod_ham3.jpg" alt="">
+                <p>黃金蝦餅堡</p>
+            </div>
+        </div>
+        <div class="productbox float-left">
+            <div>
+                <img src="./img/prod_ham4.jpg" alt="">
+                <p>鮮嫩豬柳堡</p>
+            </div>
+        </div>
+        <div class="productbox float-left">
+            <div>
+                <img src="./img/prod_ham5.jpg" alt="">
+                <p>紐奧良辣雞堡</p>
             </div>
         </div>
     </div>
-    <!-- container end -->
+
+    <!-- 餐點分頁 -->
+    <div class="productpage clearfix" id="product1page">
+        <button id="product1esc" class="productesc"><i class="fa-solid fa-xmark"></i></button>
+        <div class="w-50 float-left"><img src="./img/cartproduct/ham01.jpg" alt=""></div>
+        <div class="w-50 float-left productpagetext">
+            <h4>早美雞腿排堡</h4>
+            <p>368.6kcal</p>
+            <span>原塊去骨雞腿排，裹上酥薄麵衣烘烤鎖住雞肉鮮甜，無法抵擋的誘人滋味！<br><br>
+                內容物：雞腿排、洋蔥絲、番茄片、美生菜</span><br>
+            <button onclick="addToCartList('ham01')">加入購物車</button>
+        </div>
+    </div>
+    <div class="productpage clearfix" id="product2page">
+        <button id="product2esc" class="productesc"><i class="fa-solid fa-xmark"></i></button>
+        <div class="w-50 float-left"><img src="./img/cartproduct/ham02.jpg" alt=""></div>
+        <div class="w-50 float-left productpagetext">
+            <h4>招牌豬肉堡</h4>
+            <p>335.9Kcal</p>
+            <span>美芝城經典招牌豬肉排，特選台灣豬肉 原塊前腿肉攪碎，搭配新鮮洋蔥紅蘿蔔用心製成，無添加防腐劑與色素，佐以清脆甘甜的美生菜與番茄片，兼具美味營養！<br><br>
+                內容物：麵包、漢堡肉、番茄醬、黑胡椒、洋蔥絲、番茄片、美生菜</span><br>
+            <button onclick="addToCartList('ham02')">加入購物車</button>
+        </div>
+    </div>
 
     <footer>
         <!--.footer-logo+ul>li*5>a^^hr+p>a{按鈕}+span{文字}^.social-icon>a^.copyright -->
         <div class="footer-logo">早安美芝城</div>
         <ul class="clearfix">
-            <li><a href="#">關於我們</a></li>
-            <li><a href="#">最新消息</a></li>
-            <li><a href="#">產品介紹</a></li>
-            <li><a href="#">門市資訊</a></li>
-            <li><a href="#">聯絡我們</a></li>
+            <li><a href="./about.html">關於我們</a></li>
+            <li><a href="./news.html">最新消息</a></li>
+            <li><a href="./product.html">美味餐點</a></li>
+            <li><a href="./store.html">門市資訊</a></li>
+            <li><a href="./contact.html">聯絡我們</a></li>
         </ul>
         <!-- 水平線 -->
         <hr>
         <p class="text-center">
-            <a href="" class="btn btn-white mr-2">線上訂位</a>
+            <a href="./product.html" class="btn btn-white mr-2">線上點餐</a>
             <span>我們將美味重新定義，打造貼心服務與美味食物的對話環境，幸福滋味造就全新用餐體驗！</span>
         </p>
         <div class="social-icon text-center">
@@ -146,8 +151,53 @@
         </div>
         <div class="copyright text-center">&copy;此網站練習使用不做任何商業用途</div>
     </footer>
-    <a href="#" class="pagetop"><i class="fa-solid fa-arrow-up"></i></a>
-    <a href="#" class="booking">線上訂餐</a>
+    <a href="#" class="pagetop" id="backtotop"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- 購物車 -->
+    <div class="cartbox" id="cartpageside">
+        <div class="cartheader">
+            <h4>購物車</h4>
+            <button class="cartesc" id="cartpagesideesc"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- 購物車商品 -->
+        <div class="cartproduct-list">
+            <ul id="cartul">
+                <!-- 範例 -->
+                <!-- <li id="cartLiham01">
+                    <i class="fa-solid fa-xmark" onclick="removeCartProd('123')"></i>
+                    <div>
+                        <img src="./img/cartproduct/ham01.jpg" alt="">
+                    </div>
+                    <div class="cartProdRight">
+                        <p>早美雞腿排堡</p>
+                        <div class="pricenumber w-100">
+                            <p>NT:100</p>
+                            <div class="prodnumber">
+                                <button>-</button>
+                                <input type="text" value="1" id="">
+                                <button onclick="cartProdAdd('ham01')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+
+        <!-- 購物車結帳 -->
+        <div class="cartbottombox">
+            <div class="totalmoneybox">
+                <p>小計:</p>
+                <p id="cartTotalmoney">NT:</p>
+            </div>
+            <div class="cartbtnbox">
+                <button class="cartbtn m-b-10">查詢購物車</button>
+                <button class="cartbtn" onclick="checkout()">結帳</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/cartListproduct.js"></script>
 
 </body>
 

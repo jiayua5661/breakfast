@@ -716,6 +716,21 @@ nav>ul>li>a:hover {
 
 .shoppcarticon {
 	color: tomato;
+	position: relative;
+}
+
+.shoppcarticon>div {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	right: -10px;
+	top: -10px;
+	font-size: 11px;
+	color: white;
+	background-color: black;
+	border-radius: 50%;
 }
 
 .shoppcarticon:hover {
