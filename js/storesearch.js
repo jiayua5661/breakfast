@@ -27,7 +27,8 @@ function searchstore() {
             </tr>`;
         for (let i = 0; i < storeList.length; i++) {
             if (storeList[i].address.includes(document.getElementById('inputadd').value)) {
-                document.getElementById('mapstoreList').innerHTML += `<tr>
+                if(i % 2 == 0){
+                    document.getElementById('mapstoreList').innerHTML += `<tr style="background-color: hsl(0, 0%, 81%);">
                 <td>${storeList[i].name}</td>
                 <td>${storeList[i].tel}</td>
                 <td>${storeList[i].address}</td>
@@ -35,8 +36,20 @@ function searchstore() {
                 <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i
                             class="fa-solid fa-location-dot"></i></a></td>
             </tr>`;
+                }
+                else{
+                    document.getElementById('mapstoreList').innerHTML += `<tr>
+                    <td>${storeList[i].name}</td>
+                    <td>${storeList[i].tel}</td>
+                    <td>${storeList[i].address}</td>
+                    <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+                    <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i
+                                class="fa-solid fa-location-dot"></i></a></td>
+                </tr>`;
+                }
             }
         }
+        document.getElementById('mapstoreList').style
     }
     else {
         document.getElementById('mapstoreList').innerHTML = `<tr>
@@ -47,7 +60,18 @@ function searchstore() {
                 <th>導航</th>
             </tr>`;
         for (let i = 0; i < storeList.length; i++) {
-            document.getElementById('mapstoreList').innerHTML += `<tr>
+            if(i % 2 == 0){
+                document.getElementById('mapstoreList').innerHTML += `<tr style="background-color: hsl(0, 0%, 81%);">
+            <td>${storeList[i].name}</td>
+            <td>${storeList[i].tel}</td>
+            <td>${storeList[i].address}</td>
+            <td class="text-center"><i class="fa-solid fa-phone"></i></td>
+            <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i
+                        class="fa-solid fa-location-dot"></i></a></td>
+        </tr>`;
+            }
+            else{
+                document.getElementById('mapstoreList').innerHTML += `<tr>
                 <td>${storeList[i].name}</td>
                 <td>${storeList[i].tel}</td>
                 <td>${storeList[i].address}</td>
@@ -55,6 +79,7 @@ function searchstore() {
                 <td class="text-center"><a href="https://maps.app.goo.gl/cWnbSZwyurgTRJTq8"><i
                             class="fa-solid fa-location-dot"></i></a></td>
             </tr>`;
+            }
         }
     }
 }
