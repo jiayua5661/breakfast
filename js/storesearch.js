@@ -28,7 +28,7 @@ function searchstore() {
         for (let i = 0; i < storeList.length; i++) {
             if (storeList[i].address.includes(document.getElementById('inputadd').value)) {
                 if(i % 2 == 0){
-                    document.getElementById('mapstoreList').innerHTML += `<tr style="background-color: hsl(0, 0%, 81%);">
+                    document.getElementById('mapstoreList').innerHTML += `<tr>
                 <td>${storeList[i].name}</td>
                 <td>${storeList[i].tel}</td>
                 <td>${storeList[i].address}</td>
@@ -61,7 +61,7 @@ function searchstore() {
             </tr>`;
         for (let i = 0; i < storeList.length; i++) {
             if(i % 2 == 0){
-                document.getElementById('mapstoreList').innerHTML += `<tr style="background-color: hsl(0, 0%, 81%);">
+                document.getElementById('mapstoreList').innerHTML += `<tr>
             <td>${storeList[i].name}</td>
             <td>${storeList[i].tel}</td>
             <td>${storeList[i].address}</td>

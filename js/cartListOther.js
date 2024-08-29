@@ -1,10 +1,24 @@
         // 開啟 關閉購物車
         document.getElementById('shopcart').onclick = function () {
             document.getElementById('cartpageside').style = "transform: translateX(0%);";
+            aaa();
         }
         document.getElementById('cartpagesideesc').onclick = function () {
             document.getElementById('cartpageside').style = "transform: translateX(100%);";
         }
+
+        function aaa(){
+            window.addEventListener('click', function (event) {
+            let image = document.getElementById('cartpageside');
+            // 獲取點擊位置的座標
+            var x = event.clientX - image.getBoundingClientRect().left;
+            if(x < 0){
+                console.log("aasdasd");
+            }
+            // 顯示座標
+        });
+        }
+        
 
         let cartList = [];
         let cartul = document.getElementById('cartul');
